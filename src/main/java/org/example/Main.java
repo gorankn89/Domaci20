@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.opera.driver", "E:operadriver.exe");
-        WebDriver driver = new OperaDriver();
+        System.setProperty("webdriver.chrome.driver", "E:chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/text-box");
 
         WebElement fullName = driver.findElement(By.id("userName"));
@@ -23,8 +23,7 @@ public class Main {
         email.sendKeys("email@email.com");
         currentAdress.sendKeys("Sadasnja Adresa 15");
         permanentAddress.sendKeys("Stalna Adresa 20");
-        buttonSubmit.sendKeys(Keys.TAB);
-        buttonSubmit.sendKeys(Keys.ENTER);
+        buttonSubmit.submit();
 
 
 
