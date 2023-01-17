@@ -23,7 +23,7 @@ public class Main {
         email.sendKeys("email@email.com");
         currentAdress.sendKeys("Sadasnja Adresa 15");
         permanentAddress.sendKeys("Stalna Adresa 20");
-        buttonSubmit.submit();
+        buttonSubmit.click();
 
 
 
